@@ -1,0 +1,42 @@
+# jemdoc: menu{MENU}{index.html}
+= Tushar Sharma
+
+~~~
+{}{img_left}{images/mypic.jpg}{"Tushar"}{151}{200}{}
+Tushar Sharma\n	
+M.S. in Computer Science,\n
+[http://www.njit.edu New Jersey Institute of Technology]\n
+
+#Advisor: [http://www.cs.huji.ac.il/~shais/ Shai Shalev-Shwartz]
+#480-965-9412\n
+[ts362@njit.edu]\n
+[http://randomwits.com]
+
+*[https://www.dropbox.com/s/mv7p92r6vvse71f/new.pdf?dl=0 Curriculum vitae]* {{<img src="images/pdf.png" alt="(pdf)" />}}
+#Contact: [ts362@njit.edu email], [https://in.linkedin.com/in/tsharma3 linkedin], [https://github.com/tushar-sharma github]\n\n
+~~~
+
+== Education
+~~      
+{}{img_left}{images/njit.png}{NJIT}{81}{47}
+MS, [http://www.cs.njit.edu Computer Science] \n
+[http://www.njit.edu New Jersey Institute of Technology], 2015
+~~
+
+~~  
+{}{img_left}{images/uf.png}{UIC}{81}{47} 
+Senior Certificate, [http://www.cse.ufl.edu Computer Engineering] \n
+[http://www.ufl.edu University of Florida], 2013
+~~
+    
+~~  
+{}{img_left}{images/juit.png}{UIC}{81}{47}
+Btech,  Electronics & Communications \n
+[http://www.juit.ac.in Jaypee University of Information Technology], India, 2009
+~~
+
+== Interest
+- Cryptography
+- Algorithms & Data Structures
+
+
