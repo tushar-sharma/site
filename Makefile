@@ -1,2 +1,2 @@
 all:
-	./jemdoc index.jemdoc	
+	./jemdoc index.jemdoc courses.jemdoc tidbits.jemdoc afs.jemdoc 

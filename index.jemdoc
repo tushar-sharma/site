@@ -1,5 +1,5 @@
-# jemdoc: menu{MENU}{index.html}
-= Tushar Sharma
+# jemdoc: menu{MENU}{index.html}, fwtitle, showsource, noeqs
+= Tushar Sharma  
 
 ~~~
 {}{img_left}{images/mypic.jpg}{"Tushar"}{151}{200}{}
@@ -10,7 +10,6 @@ M.S. in Computer Science,\n
 #Advisor: [http://www.cs.huji.ac.il/~shais/ Shai Shalev-Shwartz]
 #480-965-9412\n
 [ts362@njit.edu]\n
-[http://randomwits.com]
 
 *[https://www.dropbox.com/s/mv7p92r6vvse71f/new.pdf?dl=0 Curriculum vitae]* {{<img src="images/pdf.png" alt="(pdf)" />}}
 #Contact: [ts362@njit.edu email], [https://in.linkedin.com/in/tsharma3 linkedin], [https://github.com/tushar-sharma github]\n\n

@@ -1,0 +1,80 @@
+# jemdoc: menu{MENU}{index.html}, fwtitle, showsource, noeqs
+= Tushar Sharma
+
+== Create Personal Page on AFS
+
+There are many ways to create personal page on server +Web.njit.edu+ which is accessible to all +njit+ students and faculties. 
+
+== Demo 
+
+. [https://web.njit.edu/~ts362/ My Personal Web Page]
+
+== Prerequisite 
+
+. [https://newacct.njit.edu/~accts/cgi-bin/new NJIT UCID account]
+. SSH Secure Shell 
+. [http://jemdoc.jaboc.net Jemdoc installation] (+optional+)
+
+== Method 
+
+. Open a ssh client and login to your AFS account 
+
+~~~
+{}{}
+ssh username@afsx.njit.edu
+~~~
+
+. Here
+  .. Username is your UCID 
+  .. Replace x with 1 to 36
+  .. Password is UCID password 
+
+For example 
+
+~~~
+{}{}
+ssh ts362@afs1.njit.edu
+~~~
+
+. Create a folder in your computer which will contain the your site 
+
+~~
+{}{}
+mkdir ~/site-folder
+~~
+
+. You can write your +html+ web page. Java programs, PHP, JSP, and MySQL are currently supported. Or you can download light static markup langauge [http://jemdoc.jaboc.net jemdoc]. 
+
+. Push the completed site to your personal web space on http://www.princeton.edu to make the site public.
+
+~~
+{}{}
+rsync -avze ssh  ~/site-folder/ username@afsx.njit.edu:public_html/
+~
+
+~~~
+{Note}
+The tutorial ends here unless you're using +jemdoc+
+~~~
+
+. Download the +css+ file for jemdoc. 
+
+~~
+{}{}
+curl -o ~/site-folder/jemdoc.css http://jemdoc.jaboc.net/dist/jemdoc.css
+~~
+
+. Compile the jemdoc file 
+
+~~
+{}{}
+pushd ~/site-folder 1>/dev/null ; jemdoc *.jemdoc ; popd 1>/dev/null
+~~ 
+
+. push the site to the public server 
+
+~~
+{}{}
+rsync -avze ssh --exclude '*.jemdoc' --exclude 'MENU' ~/site-folder/ username@afsx.njit.edu:public_html/
+~
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Tushar Sharma</title>
+</head>
+<body>
+<div id="fwtitle">
+<div id="toptitle">
+<h1>Tushar Sharma</h1>
+</div>
+</div>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Welcome</div>
+<div class="menu-item"><a href="index.html" class="current">home</a></div>
+<div class="menu-item"><a href="https://www.dropbox.com/s/mv7p92r6vvse71f/new.pdf?dl=0">CV&nbsp;(PDF)</a></div>
+<div class="menu-category">Others</div>
+<div class="menu-item"><a href="courses.html">courses</a></div>
+<div class="menu-item"><a href="tidbits.html">tidbits</a></div>
+<div class="menu-category">Links</div>
+<div class="menu-item"><a href="http://randomwits.com">blog</a></div>
+<div class="menu-item"><a href="https://github.com/tushar-sharma">github</a></div>
+</td>
+<td id="layout-content">
+<h2>Create Personal Page on AFS</h2>
+<p>There are many ways to create personal page on server <tt>Web.njit.edu</tt> which is accessible to all <tt>njit</tt> students and faculties. </p>
+<h2>Demo </h2>
+<ol>
+<li><p><a href="https://web.njit.edu/~ts362/" target=&ldquo;blank&rdquo;>My Personal Web Page</a></p>
+</li>
+</ol>
+<h2>Prerequisite </h2>
+<ol>
+<li><p><a href="https://newacct.njit.edu/~accts/cgi-bin/new" target=&ldquo;blank&rdquo;>NJIT UCID account</a></p>
+</li>
+<li><p>SSH Secure Shell </p>
+</li>
+<li><p><a href="http://jemdoc.jaboc.net" target=&ldquo;blank&rdquo;>Jemdoc installation</a> (<tt>optional</tt>)</p>
+</li>
+</ol>
+<h2>Method </h2>
+<ol>
+<li><p>Open a ssh client and login to your AFS account </p>
+</li>
+</ol>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+ssh username@afsx.njit.edu
+</pre></div></div>
+<ol>
+<li><p>Here</p>
+<ol>
+<li><p>Username is your UCID </p>
+</li>
+<li><p>Replace x with 1 to 36</p>
+</li>
+<li><p>Password is UCID password </p>
+</li>
+</ol>
+
+</li>
+</ol>
+<p>For example </p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+ssh ts362@afs1.njit.edu
+</pre></div></div>
+<ol>
+<li><p>Create a folder in your computer which will contain the your site </p>
+</li>
+</ol>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+mkdir ~/site-folder
+</pre></div></div>
+<ol>
+<li><p>You can write your <tt>html</tt> web page. Java programs, PHP, JSP, and MySQL are currently supported. Or you can download light static markup langauge <a href="http://jemdoc.jaboc.net" target=&ldquo;blank&rdquo;>jemdoc</a>. </p>
+</li>
+</ol>
+<ol>
+<li><p>Push the completed site to your personal web space on http:<i></i>www.princeton.edu to make the site public.</p>
+</li>
+</ol>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+rsync -avze ssh  ~/site-folder/ username@afsx.njit.edu:public_html/
+</pre></div></div>
+<div class="infoblock">
+<div class="blocktitle">Note</div>
+<div class="blockcontent">
+<p>The tutorial ends here unless you're using <tt>jemdoc</tt></p>
+</div></div>
+<ol>
+<li><p>Download the <tt>css</tt> file for jemdoc. </p>
+</li>
+</ol>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+curl -o ~/site-folder/jemdoc.css http://jemdoc.jaboc.net/dist/jemdoc.css
+</pre></div></div>
+<ol>
+<li><p>Compile the jemdoc file </p>
+</li>
+</ol>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+pushd ~/site-folder 1&gt;/dev/null ; jemdoc *.jemdoc ; popd 1&gt;/dev/null
+</pre></div></div>
+<ol>
+<li><p>push the site to the public server </p>
+</li>
+</ol>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+rsync -avze ssh --exclude '*.jemdoc' --exclude 'MENU' ~/site-folder/ username@afsx.njit.edu:public_html/
+</pre></div></div>
+<div id="footer">
+<div id="footer-text">
+Page generated 2015-08-23 23:51:38 EDT.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

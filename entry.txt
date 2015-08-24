@@ -1,0 +1,7 @@
+title: Meta post: How my blog works
+author: travis johnson
+date: 2012/07/27
+category: software
+content:
+A while back, Sharvil requested a quick overview of how I post stuff to my blog, so I thought I'd post a rundown of it.
+At the base, I use a git repository to store files named entryNNNN.txt. Each has the basic format:
