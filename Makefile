@@ -1,2 +1,2 @@
 all:
-	./jemdoc index.jemdoc courses.jemdoc tidbits.jemdoc afs.jemdoc 
+	./jemdoc -c mysite.conf index.jemdoc courses.jemdoc tidbits.jemdoc afs.jemdoc 
