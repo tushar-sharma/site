@@ -10,3 +10,12 @@
 {}{}
 git archive master --format tar --output=../my_archive_name.tar 
 ~~~
+
+== Remove everything except one file 
+
+~~~
+{}{}
+ls | grep -v file.txt | xargs rm 
+~~~
+
+
