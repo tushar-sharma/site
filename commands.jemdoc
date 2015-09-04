@@ -1,0 +1,12 @@
+# jemdoc: menu{MENU}{index.html}, fwtitle, showsource, noeqs
+= Tushar Sharma
+
+== Useful Commands
+
+
+== Archive a git repo 
+
+~~~
+{}{}
+git archive master --format tar --output=../my_archive_name.tar 
+~~~
