@@ -1,0 +1,52 @@
+# jemdoc: menu{MENU}{index.html}, fwtitle, showsource, noeqs
+= Tushar Sharma
+
+== Configuring SSH in Arch Linux
+
+First install the openssh.
+
+~~~
+{}{}
+$ sudo pacman -S openssh 
+~~~
+
+Now make the ssh service available at boot time. 
+
+~~~
+{}{}
+systemctl enable sshd.service
+~~~
+
+Skip this step if you're not using virtual box. Else install vitual box guest utilities. 
+
+~~~
+{}{}
+$ sudo pacman -S virtualbox-guest-utils
+~~~
+
+Edit the file and add the entry 
+
+~~~
+{}{}
+# /etc/modules-load.d/virtualbox.conf
+vobxguest
+~~~
+
+Enable virtual box guest services at boot time. 
+
+~~~
+{}{}
+$ systemctl enable vboxservice.service
+~~~
+
+Also edit the file and add the entry 
+
+
+~~~
+{}{}
+# /etc/hosts.allow
+sshd : ALL
+~~~
+
+Now reboot the system.
+
